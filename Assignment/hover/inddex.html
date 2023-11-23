@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .card{
+            width: 100%;
+            height: 100vh;
+            background-color: pink;
+            display: flex;
+            justify-content: space-around;
+        }
+        .box{
+            width:15%;
+            height: 35vh;
+            background-color: #fff;
+            border: 1px solid navy;
+            position: relative;
+            overflow: hidden;
+        }
+        .innerbox{
+            width: 100%;
+            height: 40%;
+            background-color: rgb(7, 124, 154);
+            position: absolute;
+            top:90%;
+        }
+        .innerbox:hover{
+            transition-duration: 1s;
+            background-color: orange;
+            /* transform: translateY(-200px); */
+            top:0%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="box box1">box1
+            <div class="innerbox">innerbox</div>
+        </div>
+        <div class="box box2">box2
+            <div class="innerbox">innerbox</div>
+        </div>
+        <div class="box box3">box3
+            <div class="innerbox">innerbox</div>
+        </div>
+        <div class="box box4">box4
+            <div class="innerbox">innerbox</div>
+        </div>
+    </div>
+</body>
+</html>
