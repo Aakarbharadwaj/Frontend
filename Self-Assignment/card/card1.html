@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card1</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(230, 230, 230);
+        }
+        .box{
+            width: 25%;
+            background-color: #fff;
+            border: 2px solid rgb(208, 207, 207);
+            border-radius: 20px;
+            margin: auto;
+        }
+        .image{
+            width: 95%;
+            margin: auto;
+            padding-top:5px ;
+        }
+        .image img{
+            width: 100%;
+            border-radius: 20px;
+        }
+        .tag{
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        .tag span{
+            border: 2px solid rgb(208, 207, 207);
+            border-radius: 20%;
+            margin-left: 5px;
+            color: rgb(135, 135, 135);
+            font-weight: 600;
+        }
+        .text{
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        .text>p{
+            padding-top: 10px;
+            color: rgb(167, 167, 167);
+            line-height: 22px;
+            font-size: large;
+        }
+        .input>input[type=submit]{
+            padding: 15px 20px;
+            border-style: none;
+            border-radius: 10px;
+            font-size: large;
+            color: rgb(1, 103, 187);
+            background-color:  rgba(1, 103, 187, 0.384);
+        }
+        .input{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="image"><img src="https://images.unsplash.com/photo-1463760959829-d829ea46e191?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8N3wxMzAxNTI4fHxlbnwwfHx8fHw%3D" alt=""></div>
+        <div class="tag">
+            <span>Nature</span>
+            <span>Lakes</span>
+        </div>
+        <div class="text">
+            <h2>Holiday Place</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde dolores assumenda eveniet eius, in iste sunt ipsam. Repellendus totam amet illum odio in dolorem expedita quasi obcaecati laudantium sed.</p>
+        </div>
+        <div class="input">
+            <input type="submit" value="submit">
+        </div>
+    </div>
+</body>
+</html>
