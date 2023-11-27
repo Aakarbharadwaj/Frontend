@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .google img{
+            width: 50%;
+            margin-left: 26%;
+        }
+        .box{
+            border: 2px solid grey;
+            width: 28vw;
+            margin: 15vh auto;
+            padding: 30px 0 70px 0;
+            border-radius: 5px;
+        }
+        .box>div{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        
+        a{
+            color:rgb(20, 55, 255);
+            text-decoration: none;
+        }
+        .signin p{
+            padding: 6px;
+        }
+        .signin>p:first-child{
+            font-size: larger;
+        }
+        .signin{
+            text-align: center;
+        }
+        fieldset input{
+            border-style: none;
+        }
+        fieldset{
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid rgb(20, 55, 255);
+        }
+        legend{
+            margin-left: 10px;
+            padding: 8px;
+            color: rgb(20, 55, 255);
+            font-size: small;
+        }
+        .create{
+            display: flex;
+            justify-content: space-between;
+        }
+        .create input{
+            color: white;
+            background-color: rgb(20, 55, 255);
+            padding: 5px 10px;
+            border-radius:3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="google"><img src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw" alt=""></div>
+        <div class="signin">
+            <p>Sign in</p>
+            <p>use your google account</p>
+        </div>
+        <div class="input">
+        <fieldset>
+            <legend>Email or phone</legend>
+            <input type="text">
+        </fieldset>
+        <p><a href="">Forgot email?</a></p>
+        </div>
+        <div class="learn_more">
+            <p>Not your computer? Use guest mode to sign in privately.</p>
+            <a href="">Learn More</a>
+        </div>
+        <div class="create">
+            <a href="">Create account</a>
+            <input type="button" value="submit">
+        </div>
+
+    </div>
+</body>
+</html>
