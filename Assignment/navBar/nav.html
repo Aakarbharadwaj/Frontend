@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            position: relative;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid ;
+            padding: 30px;
+        }
+        .list{
+            margin-top: 16px;
+        }
+        .options{
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 166, 0, 0.137);
+            width: 150px;
+            position: absolute;
+            right: 180px;
+            visibility: hidden;
+        }
+        .options a{
+            padding-top: 20px;
+        }
+        #feature:hover .options{
+            visibility: visible;
+        }
+        .list a,.options a{
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.5rem;
+            padding-right: 50px;
+        }
+        .list :first-child{
+            color: rgb(255, 119, 0);
+        }
+        .nav i{
+            position:absolute ;
+            right: 80px;
+            visibility: hidden;
+        }
+        .left{
+            width: 33%;
+            height: 100vh;
+        }
+        .content{
+            background: url("https://themewagon.github.io/klassy-cafe/assets/images/top-left-bg.jpg");
+            height: 100%;
+        
+        }
+        @media (max-width:768px){
+            .list{
+                display: none;
+            }
+            .menubar i{
+                visibility: visible;
+                margin-top: 16px;
+            }
+        }
+        @media (max-width:375px){
+            .menubar i{
+                right: 40px;
+            }
+        }
+        @media (min-width:994px){
+            .list{
+                padding-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+            <div class="logo"><img src="https://themewagon.github.io/klassy-cafe/assets/images/klassy-logo.png" alt=""></div>
+            <div class="menubar"><i class="fa-solid fa-bars" style="color: #030408;"></i></div>
+            <div class="list">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Menu</a>
+                <a href="">Chefs</a>
+                <a href="" id="feature">Feature</a>
+                <a href="">contact Us</a>
+            </div>
+        </div>
+        <div class="options">
+            <a href="">feature 1</a>
+            <a href="">feature 2</a>
+            <a href="">feature 3</a>
+            <a href="">feature 4</a>
+        </div>
+
+        <header>
+            <div class="left">
+                <div class="content">
+                    
+                </div>
+            </div>
+            <div class="right"></div>
+        </header> 
+    </div>
+</body>
+</html>
