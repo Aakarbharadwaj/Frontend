@@ -24,19 +24,21 @@
             margin-top: 16px;
         }
         .options{
-            display: flex;
-            flex-direction: column;
             background-color: rgba(255, 166, 0, 0.137);
             width: 150px;
             position: absolute;
             right: 180px;
             visibility: hidden;
-        }
-        .options a{
-            padding-top: 20px;
+
         }
         #feature:hover .options{
             visibility: visible;
+            }
+        .options a{
+            padding-top: 20px;
+        }
+        .list a:hover{
+            color: rgb(255, 119, 0);
         }
         .list a,.options a{
             text-decoration: none;
@@ -52,14 +54,97 @@
             right: 80px;
             visibility: hidden;
         }
+        header{
+            height: 100vh;
+            display: flex;
+        }
         .left{
             width: 33%;
-            height: 100vh;
+            height: 100%;
+        }
+        .right{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/slide-02.jpg);
+            background-size: cover;
+            width: 67%;
+            /*height: 100%;*/             /* ????????????? */
         }
         .content{
-            background: url("https://themewagon.github.io/klassy-cafe/assets/images/top-left-bg.jpg");
-            height: 100%;
-        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(https://themewagon.github.io/klassy-cafe/assets/images/top-left-bg.jpg);
+            height: 100%;                   /* ????????????? */
+        }
+        .innnercontent{
+            height: 20px;
+            width: 50px;
+            background-color: #fff;    /* why color not applied?????????*/
+        }
+        .innercontent h1{
+            font-family: cursive;
+            font-size: 3rem;
+            font-weight: 100;
+            color: #fff;
+        }
+        .innercontent p{
+            color: #fff;
+        }
+        .innercontent button{
+            color: rgb(255, 119, 0);
+            background-color: #fff;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-style: none;
+            border-radius: 3px;
+            font-weight: 800;
+        }
+        button:hover{
+            opacity: 0.8;
+            transition-duration: 1s;
+        }
+        .about{
+            display: flex;
+            /* height: 50vh; */
+            background-color: rgb(112, 193, 216);
+            justify-content: center;
+            align-items: center;
+        }
+        .aboutLeft,.aboutRight{
+            width: 40%;
+            /* height: 100%; */
+            background-color: #fff;
+            margin-top: 100px;
+        }
+        .aboutLeft div{
+            border: 2px solid;
+            height: 30%;
+        }
+        .heading span{
+            letter-spacing: -1.4px;
+            padding-right: 6px;
+        }
+        .heading{
+            font-size: 1.5rem;
+        }
+        .heading h6{
+            color: rgb(255, 119, 0);
+            font-weight: 100;
+        }
+        .heading h2{
+            margin-top: 20px;
+            width: 80%;
+        }
+        .aboutLeft p{
+            line-height: 1.5rem;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .aboutImages{
+            display: flex;
+            justify-content: space-around;
+            height: 400px;
+        }
+        .img1,.img2,.img3{
         }
         @media (max-width:768px){
             .list{
@@ -80,6 +165,15 @@
                 padding-right: 10px;
             }
         }
+        @media (max-width:500px){
+            .left,.right{
+                width: 100%;
+                height: 100%;
+            }
+            header{
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,25 +186,59 @@
                 <a href="">About</a>
                 <a href="">Menu</a>
                 <a href="">Chefs</a>
-                <a href="" id="feature">Feature</a>
+                <a href="" id="feature">Feature
+                    <div class="options">
+                        <ul>
+                            <li>feature1</li>
+                            <li>feature2</li>
+                            <li>feature3</li>
+                            <li>feature4</li>
+                        </ul>
+                    </div>
+                </a>
                 <a href="">contact Us</a>
             </div>
         </div>
-        <div class="options">
-            <a href="">feature 1</a>
-            <a href="">feature 2</a>
-            <a href="">feature 3</a>
-            <a href="">feature 4</a>
-        </div>
+
 
         <header>
             <div class="left">
                 <div class="content">
-                    
+                    <div class="innercontent">
+                        <h1>klassyCafe</h1>
+                        <p>THE BEST EXPERIENCE</p>
+                        <button>Make A Reservation</button>
+                    </div>
                 </div>
             </div>
             <div class="right"></div>
         </header> 
+        <main>
+            <div class="about">
+                <div class="aboutLeft h6">
+                    <div class="heading"> 
+                        <h6><span>------</span>ABOUT US</h6>
+                        <h2>We Leave A Delicious Memory For You</h2> 
+                    </div>
+                    <div class="para">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae voluptatum officia, reprehenderit possimus modi dolorum hic ullam ratione, recusandae atque consequuntur unde quo facere exercitationem sint, deleniti tenetur eius repellendus.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At rem, fuga iure voluptatem, libero illo quae corporis error commodi inventore consequuntur ea eius labore et ex impedit optio delectus fugiat.
+                        </p>
+                    </div>
+                    <div class="aboutImages">
+                        <div class="img1"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-thumb-01.jpg" alt=""></div>
+                        <div class="img2"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-thumb-01.jpg" alt=""></div>
+                        <div class="img3"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-thumb-01.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="aboutRight"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-video-bg.jpg" alt=""></div>
+            </div>
+            <div class="about h6"></div>
+            <div class="menu h6"></div>
+            <div class="chefs h6"></div>
+            <div class="contact h6"></div>
+            <div class="klassyWeek h6"></div>
+        </main>
     </div>
 </body>
 </html>
