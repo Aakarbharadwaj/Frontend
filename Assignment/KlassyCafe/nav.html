@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            position: relative;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+        }
+        .list{
+            margin-top: 16px;
+        }
+        .options{
+            background-color: rgba(255, 166, 0, 0.137);
+            width: 150px;
+            position: absolute;
+            right: 180px;
+            visibility: hidden;
+
+        }
+        #feature:hover .options{
+            visibility: visible;
+            }
+        .options a{
+            padding-top: 20px;
+        }
+        .list a:hover{
+            color: rgb(255, 119, 0);
+        }
+        .list a,.options a{
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.5rem;
+            padding-right: 50px;
+        }
+        .list :first-child{
+            color: rgb(255, 119, 0);
+        }
+        .nav i{
+            position:absolute ;
+            right: 80px;
+            visibility: hidden;
+        }
+        header{
+            height: 100vh;
+            display: flex;
+        }
+        .left{
+            width: 33%;
+            height: 100%;
+        }
+        .right{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/slide-02.jpg);
+            background-size: cover;
+            width: 67%;
+            /*height: 100%;*/             /* ????????????? */
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(https://themewagon.github.io/klassy-cafe/assets/images/top-left-bg.jpg);
+            height: 100%;                   /* ????????????? */
+        }
+        .innnercontent{
+            height: 20px;
+            width: 50px;
+            background-color: #fff;    /* why color not applied?????????*/
+        }
+        .innercontent h1{
+            font-family: cursive;
+            font-size: 3rem;
+            font-weight: 100;
+            color: #fff;
+        }
+        .innercontent p{
+            color: #fff;
+        }
+        .innercontent button{
+            color: rgb(255, 119, 0);
+            background-color: #fff;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-style: none;
+            border-radius: 3px;
+            font-weight: 800;
+        }
+        button:hover{
+            opacity: 0.8;
+            transition-duration: 1s;
+        }
+        .about{
+            display: flex;
+            padding-bottom: 100px;
+            /* height: 800px; */
+            /* background-color: rgb(112, 193, 216); */
+            justify-content: center;
+            align-items: center;
+        }
+        .menu{
+            /* padding: 100px 0 100px 240px; */
+            /* height: 800px; */
+            background-color: rgba(255, 166, 0, 0.048);
+            padding-bottom: 100px;
+        }
+        .menu .heading{
+            width: 800px;
+            padding: 100px 0 100px 240px; 
+        }
+        .card{
+            display: flex;
+            /* margin-top: 100px; */
+            justify-content: space-evenly;
+            width: 100vw;
+            overflow:hidden;
+        }
+        .card1,.card2,.card3,.card4,.card5,.card6{
+            width: 280px;
+            height: 400px;
+            background-size: cover;
+            /* padding-left: 30px; */
+            position: relative;
+        }.card img{
+            height: 100%;
+            width: 100%;
+        }
+        .card1{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/menu-item-02.jpg);
+        }
+        .card2{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/menu-item-04.jpg);
+        }
+        .card3{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/menu-item-01.jpg);
+        }
+        .card4{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/menu-item-03.jpg);
+        }
+        .card5{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/menu-item-04.jpg);
+        }
+        /* .card6{
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/menu-item-04.jpg);
+        } */
+        .cost{
+            background-color: rgb(255, 119, 0);
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 15px;
+        }
+        .incard{
+            background-color: rgb(255, 119, 0);
+            color: white;
+            position: absolute;
+            padding: 25px 0 0 20px;
+            width: 280px;
+            height: 400px;
+            top: 93%;
+            left: 0px;
+        }
+        .incard h3{
+            font-size: 2rem;
+        }
+        .incard:hover{
+            top:60%;
+            transition-duration: 1s;
+        }
+        .aboutLeft{
+            padding-top: 65px;
+        }
+        .aboutLeft,.aboutRight{
+            width: 600px;
+            padding-left: 50px;
+            /* height: 80%; */
+            background-color: #fff;
+            /* margin-top: 20px; */
+        }
+        .aboutLeft div{
+            margin-top: 20px;
+            /* height: 30%; */
+        }
+        .aboutRight{
+            margin-bottom: 20px;
+        }
+        .heading span{
+            letter-spacing: -1.4px;
+            padding-right: 6px;
+        }
+        .heading{
+            font-size: 1.5rem;
+        }
+        .heading h6{
+            color: rgb(255, 119, 0);
+            font-weight: 100;
+        }
+        .heading h2{
+            margin-top: 20px;
+            width: 80%;
+        }
+        .aboutLeft p{
+            line-height: 2rem;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .aboutImages{
+            display: flex;
+            justify-content: space-around;
+            /* height: 400px; */
+        }
+        .aboutImages img{
+            width: 100%;
+        }
+        .img1{
+            width: 170px;
+            height: 170px;
+        }
+        .chefs{
+            padding-bottom: 100px;
+        }
+        .chefs h6,#h2,.klassyWeek{
+            width: 400px;
+        }
+        .chefs .heading,.klassyWeek .heading
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .chefsCard{
+            border: 1.5px solid;
+            height: 480px;
+            width: 390px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .chefsbox{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+            width: 1350px;
+            margin: auto;
+        }
+        .opacity{
+            width: 95%;
+            height: 80%;
+            /* position: absolute; */
+            margin: 10px 0 0 10px;
+            background-color: rgb(56, 56, 56);
+        }
+        .photo{
+            width: 95%;
+            height: 80%;
+            position: absolute;
+            margin: 10px 0 0 10px;
+        }
+        .photo img{
+            width: 100%;
+            height: 100%;
+        }
+        .photo{
+            z-index: 1;
+        }
+        .name{
+            width: 370px;
+            height: 100px;
+            margin: auto;
+            font-size: 3rem;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .name p{
+            font-size: 1rem;
+            
+        }
+        .chefsCard:hover .name h6{
+            color: rgb(255, 119, 0);
+            transition-duration: .4s;
+        }
+        .chefsCard:hover .icon div{
+            z-index: 2;
+        }
+        .chefsCard:hover .photo{
+            opacity: .1;
+            transition-duration: .4s;
+        }
+        .chefsCard:hover{
+            border: 1.5px solid rgb(255, 119, 0);
+            transition-duration: .4s;
+        }
+        .icon div:hover{
+            background-color: rgb(255, 119, 0);
+            /* transition-duration: .4s; */
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 60%;
+            top: 170px;
+            left: 65px;
+        }
+        .icon2 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 36%;
+            bottom: 40px;
+            margin: auto;
+            background-color:  rgb(255, 119, 0);
+            padding: 35px 30px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+        }
+        .icon div{
+            position: relative;
+            background-color: #fff;
+            height: 50px;
+            width: 50px;
+            padding: 19px;
+            margin-left: 20px;
+            border-radius: 50px;
+        }
+        .contact{
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/reservation-bg.jpg);
+            /* height: 100vh; */
+        }
+        .contact p{
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        .contactRight{
+            text-align: center;
+            background-color: #fff;
+            color: #000000;
+            border-radius: 5px;
+        }
+        .contactRight>div{
+            margin: 25px 0 ;
+        }
+        .contactRight h1{
+            margin: 40px;
+        }
+        .contactRight textarea,.contactRight .button{
+            width: 85%;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .contactRight .button{
+            background-color: rgb(255, 119, 0);
+            padding: 10px;
+            margin-bottom: 100px;
+        }
+        .contactLeft,.contactRight{
+            width: 38vw;
+            margin: 100px 0;
+            
+            /* height: 70vh; */
+        }
+        .contactLeft .heading h2{
+            width: 90%;
+        }
+        .details{
+            display: flex;
+            justify-content: space-between;
+            width: 89%;
+            margin: 80px 0;
+        }
+        .phone,.email{
+            width: 48%;
+            background-color: #fff;
+            color: #000000;
+            border-radius: 6px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .phone a,.email a{
+            display: block;
+            cursor: pointer;
+        }
+        .phone h1,.email h1{
+            margin-bottom: 20px;
+        }
+        fieldset{
+            width: 40%;
+            padding: 15px 0 15px 10px;
+            margin: 20px 15px 0 0;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 1px solid grey;
+        }
+        .input{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        fieldset>div{
+            margin-top: 120px ;
+        }
+        fieldset>input ,fieldset>select{
+            border-style: none;
+            text-decoration: none;
+            outline: none;
+            appearance: none;
+        }
+        select{
+            color: grey;
+            padding-right: 28px;
+        }
+        .button,.button button{
+            border: none;
+            color: white;
+            background-color: rgb(255, 119, 0);
+            cursor: pointer;
+            font-size: large;
+        }
+        .klassyList li{
+            list-style: none;
+            background-color: rgba(255, 119, 0, 0.082);
+            padding: 20px 40px;
+            border-radius: 5px;
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+        .klassyList{
+            display: flex;
+            margin: 70px;
+        }
+        .klassyWeek{
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            width: 1350px;
+            margin: auto;
+        }
+        .parent{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .last{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .last div:nth-child(2){
+            width: 60%;
+            padding-left: 10px;
+        }
+        .last :nth-child(3){
+            background-color: rgb(255, 119, 0);
+            height: 80px;
+            width: 80px;
+            padding: 24px;
+        }
+        .last div:nth-child(3){
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .last img{
+            border-radius: 7px;
+        }
+        .div li{
+            background-color: white;
+            padding: 22px 24px;
+            border-radius: 50px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .div ul{
+            display: flex;
+            list-style: none;
+        } 
+        .div p{
+            color: white;
+        }
+        footer{
+            background-color: rgb(255, 119, 0);
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 0 50px 0;
+        }
+        @media (max-width:768px){
+            .list{
+                display: none;
+            }
+            .menubar i{
+                visibility: visible;
+                margin-top: 16px;
+            }
+        }
+        @media (max-width:375px){
+            .menubar i{
+                right: 40px;
+            }
+        }
+        @media (min-width:994px){
+            .list{
+                padding-right: 10px;
+            }
+        }
+        @media (max-width:500px){
+            .left,.right{
+                width: 100%;
+                height: 100%;
+            }
+            header{
+                display: block;
+            }
+        }
+        @media (max-width:1024px){
+            .img1{
+                width: 120px;
+                height: 120px;
+            }
+            .aboutRight{
+                width: 200px;
+            }
+        }
+        @media (max-width:768px){
+            .about{
+                display: block;
+            }
+            .aboutRight{
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+            <div class="logo"><img src="https://themewagon.github.io/klassy-cafe/assets/images/klassy-logo.png" alt=""></div>
+            <div class="menubar"><i class="fa-solid fa-bars" style="color: #030408;"></i></div>
+            <div class="list">
+                <a href="">Home</a>
+                <a href="#a">About</a>
+                <a href="#m">Menu</a>
+                <a href="#ch">Chefs</a>
+                <a href="" id="feature">Feature
+                    <div class="options">
+                        <ul>
+                            <li>feature1</li>
+                            <li>feature2</li>
+                            <li>feature3</li>
+                            <li>feature4</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="#co">contact Us</a>
+            </div>
+        </div>
+
+
+        <header>
+            <div class="left">
+                <div class="content">
+                    <div class="innercontent">
+                        <h1>klassyCafe</h1>
+                        <p>THE BEST EXPERIENCE</p>
+                        <button>Make A Reservation</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right"></div>
+        </header> 
+        <main>
+            <div class="about" id="a">
+                <div class="aboutLeft h6">
+                    <div class="heading"> 
+                        <h6><span>------</span>ABOUT US</h6>
+                        <h2>We Leave A Delicious Memory For You</h2> 
+                    </div>
+                    <div class="para">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae voluptatum officia, reprehenderit possimus modi dolorum hic ullam ratione, recusandae atque consequuntur unde quo facere exercitationem sint, deleniti tenetur eius repellendus.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At rem, fuga iure voluptatem, libero illo quae corporis error commodi inventore consequuntur ea eius labore et ex impedit optio delectus fugiat.
+                        </p>
+                    </div>
+                    <div class="aboutImages">
+                        <div class="img1"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-thumb-01.jpg" alt=""></div>
+                        <div class="img1"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-thumb-01.jpg" alt=""></div>
+                        <div class="img1"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-thumb-01.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="aboutRight"><img src="https://themewagon.github.io/klassy-cafe/assets/images/about-video-bg.jpg" alt=""></div>
+            </div>
+            <div class="menu h6" id="m">
+                <div class="heading"> 
+                    <h6><span>------</span>OUR MENU</h6>
+                    <h2>Our selection of cakes with quality of taste</h2> 
+                </div>
+                <div class="card">
+                    <div class="card1">
+                        <div class="cost"><h1>$22</h1></div>
+                        <div class="incard">
+                            <h3>chocolate cake</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="cost"><h1>$22</h1></div>
+                        <div class="incard">
+                            <h3>chocolate cake</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <div class="cost"><h1>$22</h1></div>
+                        <div class="incard">
+                            <h3>chocolate cake</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
+                        </div>
+                    </div>
+                    <div class="card4">
+                        <div class="cost"><h1>$22</h1></div>
+                        <div class="incard">
+                            <h3>chocolate cake</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
+                        </div>
+                    </div>
+                    <div class="card5">
+                        <div class="cost"><h1>$22</h1></div>
+                        <div class="incard">
+                            <h3>chocolate cake</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
+                        </div>
+                    </div>
+                    <!-- <div class="card6">
+                        <div class="cost"><h1>$22</h1></div>
+                        <div class="incard">
+                            <h3>chocolate cake</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="chefs h6" id="ch">
+                <div class="heading"> 
+                    <h6>OUR CHEFS</h6>
+                    <h2 id="h2">We offer the best ingredients for You</h2> 
+                </div>
+                <div class="chefsbox">
+                    <div class="chefsCard">
+                        <div class="photo">
+                            <img src="https://themewagon.github.io/klassy-cafe/assets/images/chefs-01.jpg" alt="">
+                        </div>
+                        <div class="icon">
+                            <div><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></div>
+                            <div><i class="fa-brands fa-twitter" style="color: #000000;"></i></div>
+                            <div><i class="fa-brands fa-instagram" style="color: #000000;"></i></div>
+                        </div>
+                        <div class="opacity"></div>
+                        <div class="name">
+                            <h6>Randi Walker</h6>
+                            <p>Experienced chef</p>
+                        </div>
+                    </div>
+                    <div class="chefsCard">
+                        <div class="photo">
+                            <img src="https://themewagon.github.io/klassy-cafe/assets/images/chefs-02.jpg" alt="">
+                        </div>
+                        <div class="icon">
+                            <div><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></div>
+                            <div><i class="fa-brands fa-twitter" style="color: #000000;"></i></div>
+                            <div><i class="fa-brands fa-instagram" style="color: #000000;"></i></div>
+                        </div>
+                        <div class="opacity"></div>
+                        <div class="name">
+                            <h6>David warner</h6>
+                            <p>Experienced chef</p>
+                        </div>
+                    </div>
+                    <div class="chefsCard">
+                        <div class="photo">
+                            <img src="https://themewagon.github.io/klassy-cafe/assets/images/chefs-03.jpg" alt="">
+                        </div>
+                        <div class="icon">
+                            <div><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></div>
+                            <div><i class="fa-brands fa-twitter" style="color: #000000;"></i></div>
+                            <div><i class="fa-brands fa-instagram" style="color: #000000;"></i></div>
+                        </div>
+                        <div class="opacity"></div>
+                        <div class="name">
+                            <h6>Jack karler</h6>
+                            <p>Experienced chef</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact h6" id="co">
+                <div class="contactLeft">
+                    <div class="heading"> 
+                        <h6><span>------</span>CONTACT US</h6>
+                        <h2>Here You Can Make A Reservation Or Just walkin to our cafe</h2> 
+                        <p>Donec pretium est orci, non vulputate arcu hendrerit a. Fusce a eleifend riqsie, namei sollicitudin urna diam, sed commodo purus porta ut.</p>
+                    </div>
+                    <div class="details">
+                        <div class="phone">
+                            <div class="icon2">
+                                <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
+                            </div>
+                            <div>
+                                <h1>Phone Numbers</h1>
+                                <a>9547637563</a>
+                                <a>8384654568</a>
+                            </div>
+                        </div>
+                        <div class="email">
+                            <div class="icon2">
+                                <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
+                            </div>
+                            <div>
+                                <h1>Email</h1>
+                                <a>hello@company.com</a>
+                                <a>info@company.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactRight">
+                    <h1>Table Reservation</h1>
+                    <div class="input">
+                        <fieldset><input type="text" placeholder="your name" required></fieldset>
+                        <fieldset><input type="text" placeholder="Your phone number"></fieldset>
+                        <fieldset><input type="date" placeholder="dd/mm/yyyy"></fieldset>
+                        <fieldset><input type="text" placeholder="Your email address"></fieldset>
+                        
+                        <fieldset>
+                            <select name="" id="">
+                                <option value="">Your number of guest</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <select name="" id="">
+                                <option value="">Time</option>
+                                <option value="">Breakfast</option>
+                                <option value="">Lunch</option>
+                                <option value="">Dinner</option>
+                            </select>
+                        </fieldset>
+                        
+                    </div>
+                    <div class="msg">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Messege"></textarea>
+                    </div>
+                    <fieldset class="button"><button>Make A Reservation</button></fieldset>
+                </div>
+            </div>
+            <div class="klassyWeek h6" >
+                <div class="heading"> 
+                    <h6>KLASSY WEEK</h6>
+                    <h2 id="h2">This Week’s Special Meal Offers</h2> 
+                    <ul class="klassyList">
+                        <li><i class="fa-regular fa-mug-saucer" style="color: rgb(255, 119, 0);"></i></li>
+                        <li><i class="fa-solid fa-utensils" style="color: rgb(255, 119, 0);"></i></li>
+                        <li><i class="fa-brands fa-wpbeginner" style="color: rgb(255, 119, 0);"></i></li>
+                    </ul>
+                </div>
+                <div class="parent">
+                    <div class="last">
+                        <div><img src="https://themewagon.github.io/klassy-cafe/assets/images/tab-item-01.png" alt=""></div>
+                        <div>
+                            <h2>Fresh Chicken Salad</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                        </div>
+                        <div><h2>$20</h2></div>
+                    </div>
+                    <div class="last">
+                        <div><img src="https://themewagon.github.io/klassy-cafe/assets/images/tab-item-01.png" alt=""></div>
+                        <div>
+                            <h2>Fresh Chicken Salad</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                        </div>
+                        <div><h2>$6.5</h2></div>
+                    </div>
+                    <div class="last">
+                        <div><img src="https://themewagon.github.io/klassy-cafe/assets/images/tab-item-01.png" alt=""></div>
+                        <div>
+                            <h2>Fresh Chicken Salad</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                        </div>
+                        <div><h2>$45</h2></div>
+                    </div>
+                    <div class="last">
+                        <div><img src="https://themewagon.github.io/klassy-cafe/assets/images/tab-item-01.png" alt=""></div>
+                        <div>
+                            <h2>Fresh Chicken Salad</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                        </div>
+                        <div><h2>$15</h2></div>
+                    </div>
+                    <div class="last">
+                        <div><img src="https://themewagon.github.io/klassy-cafe/assets/images/tab-item-01.png" alt=""></div>
+                        <div>
+                            <h2>Fresh Chicken Salad</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                        </div>
+                        <div><h2>$23</h2></div>
+                    </div>
+                    <div class="last">
+                        <div><img src="https://themewagon.github.io/klassy-cafe/assets/images/tab-item-01.png" alt=""></div>
+                        <div>
+                            <h2>Fresh Chicken Salad</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                        </div>
+                        <div><h2>$44</h2></div>
+                    </div>
+                </div>    
+            </div>
+        </main>
+        <footer>
+            <div class="div">
+                <ul>
+                    <li><i class="fa-brands fa-facebook-f" style="color: rgb(255, 119, 0)"></i></li>
+                    <li><i class="fa-brands fa-twitter" style="color: rgb(255, 119, 0)"></i></li>
+                    <li><i class="fa-brands fa-instagram" style="color: rgb(255, 119, 0)"></i></li>
+                    <li><i class="fa-brands fa-facebook-f" style="color: rgb(255, 119, 0)"></i></li>
+                </ul>
+            </div>
+            <div class="div"><img src="https://themewagon.github.io/klassy-cafe/assets/images/white-logo.png" alt=""></div>
+            <div class="div">
+                <p>Copy Right klassy cafe co.</p>
+                <p>Designe:TemplateMo</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
