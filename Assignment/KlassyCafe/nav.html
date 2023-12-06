@@ -72,7 +72,8 @@
             justify-content: center;
             align-items: center;
             background: url(https://themewagon.github.io/klassy-cafe/assets/images/top-left-bg.jpg);
-            height: 100%;                   /* ????????????? */
+            height: 100%;                   /*?????????????*/
+            /* padding: 314px; */
         }
         .innnercontent{
             height: 20px;
@@ -109,6 +110,7 @@
             justify-content: center;
             align-items: center;
         }
+        
         .menu{
             /* padding: 100px 0 100px 240px; */
             /* height: 800px; */
@@ -116,19 +118,21 @@
             padding-bottom: 100px;
         }
         .menu .heading{
-            width: 800px;
+            max-width: 800px;
             padding: 100px 0 100px 240px; 
         }
         .card{
             display: flex;
+            flex-wrap: wrap;
             /* margin-top: 100px; */
             justify-content: space-evenly;
             width: 100vw;
-            overflow:hidden;
+            /* overflow:hidden; */
         }
         .card1,.card2,.card3,.card4,.card5,.card6{
-            width: 280px;
+            max-width: 280px;
             height: 400px;
+            margin-left: 10px;
             background-size: cover;
             /* padding-left: 30px; */
             position: relative;
@@ -165,29 +169,38 @@
         .incard{
             background-color: rgb(255, 119, 0);
             color: white;
-            position: absolute;
+            position: relative;
             padding: 25px 0 0 20px;
             width: 280px;
-            height: 400px;
+            height: 200px;
             top: 93%;
-            left: 0px;
+            transition:all 1s;
+            /* left: 0px; */
+        }
+        .crd{
+            overflow: hidden;
         }
         .incard h3{
             font-size: 2rem;
         }
-        .incard:hover{
-            top:60%;
-            transition-duration: 1s;
+        .crd:hover .incard{
+            /* top:60%; */
+            transform: translateY(-150px);
         }
+        
         .aboutLeft{
             padding-top: 65px;
         }
         .aboutLeft,.aboutRight{
-            width: 600px;
+            max-width: 600px;
             padding-left: 50px;
             /* height: 80%; */
             background-color: #fff;
             /* margin-top: 20px; */
+            
+        }
+        .aboutRight img{
+            width: 100%;
         }
         .aboutLeft div{
             margin-top: 20px;
@@ -195,6 +208,7 @@
         }
         .aboutRight{
             margin-bottom: 20px;
+
         }
         .heading span{
             letter-spacing: -1.4px;
@@ -231,8 +245,8 @@
         .chefs{
             padding-bottom: 100px;
         }
-        .chefs h6,#h2,.klassyWeek{
-            width: 400px;
+        .chefs h6,#h2{
+            max-width: 400px;
         }
         .chefs .heading,.klassyWeek .heading
         {
@@ -245,15 +259,16 @@
         .chefsCard{
             border: 1.5px solid;
             height: 480px;
-            width: 390px;
+            max-width: 390px;
             border-radius: 5px;
             position: relative;
         }
         .chefsbox{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
             padding-top: 100px;
-            width: 1350px;
+            max-width: 1350px;
             margin: auto;
         }
         .opacity{
@@ -342,6 +357,8 @@
             color: white;
             background-image: url(https://themewagon.github.io/klassy-cafe/assets/images/reservation-bg.jpg);
             /* height: 100vh; */
+            /* background-size: cover;
+            width: 100%; */
         }
         .contact p{
             margin-top: 20px;
@@ -360,7 +377,7 @@
             margin: 40px;
         }
         .contactRight textarea,.contactRight .button{
-            width: 85%;
+            max-width: 80%;
             margin: auto;
             border-radius: 5px;
         }
@@ -376,7 +393,7 @@
             /* height: 70vh; */
         }
         .contactLeft .heading h2{
-            width: 90%;
+            max-width: 90%;
         }
         .details{
             display: flex;
@@ -384,6 +401,7 @@
             width: 89%;
             margin: 80px 0;
         }
+        
         .phone,.email{
             width: 48%;
             background-color: #fff;
@@ -400,7 +418,7 @@
             margin-bottom: 20px;
         }
         fieldset{
-            width: 40%;
+            width: 39%;
             padding: 15px 0 15px 10px;
             margin: 20px 15px 0 0;
             border-radius: 5px;
@@ -420,10 +438,11 @@
             text-decoration: none;
             outline: none;
             appearance: none;
+            padding-right: 36px;
         }
         select{
             color: grey;
-            padding-right: 28px;
+            padding-right: 36px;
         }
         .button,.button button{
             border: none;
@@ -449,7 +468,7 @@
             flex-direction: column;
             padding-top: 50px;
             padding-bottom: 100px;
-            width: 1350px;
+            max-width: 100%;
             margin: auto;
         }
         .parent{
@@ -512,6 +531,15 @@
             .menubar i{
                 right: 40px;
             }
+            .menu .heading{
+                padding-left: 9px;
+            }
+            footer{
+                flex-wrap: wrap;
+            }
+            footer>div{
+                padding-top: 10px;
+            }
         }
         @media (min-width:994px){
             .list{
@@ -526,15 +554,22 @@
             header{
                 display: block;
             }
+            .parent{
+                display: block;
+                width: 100%;
+            }
+            .crd{
+                margin-top: 20px;
+            }
         }
         @media (max-width:1024px){
             .img1{
                 width: 120px;
                 height: 120px;
             }
-            .aboutRight{
+            /* .aboutRight{
                 width: 200px;
-            }
+            } */
         }
         @media (max-width:768px){
             .about{
@@ -609,35 +644,35 @@
                     <h2>Our selection of cakes with quality of taste</h2> 
                 </div>
                 <div class="card">
-                    <div class="card1">
+                    <div class="card1 crd">
                         <div class="cost"><h1>$22</h1></div>
                         <div class="incard">
                             <h3>chocolate cake</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
                         </div>
                     </div>
-                    <div class="card2">
+                    <div class="card2 crd">
                         <div class="cost"><h1>$22</h1></div>
                         <div class="incard">
                             <h3>chocolate cake</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
                         </div>
                     </div>
-                    <div class="card3">
+                    <div class="card3 crd">
                         <div class="cost"><h1>$22</h1></div>
                         <div class="incard">
                             <h3>chocolate cake</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
                         </div>
                     </div>
-                    <div class="card4">
+                    <div class="card4 crd">
                         <div class="cost"><h1>$22</h1></div>
                         <div class="incard">
                             <h3>chocolate cake</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia quisquam quis quibusdam fugiat cupiditate, at </p>
                         </div>
                     </div>
-                    <div class="card5">
+                    <div class="card5 crd">
                         <div class="cost"><h1>$22</h1></div>
                         <div class="incard">
                             <h3>chocolate cake</h3>
@@ -716,7 +751,7 @@
                     <div class="details">
                         <div class="phone">
                             <div class="icon2">
-                                <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
+                                <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
                             </div>
                             <div>
                                 <h1>Phone Numbers</h1>
@@ -726,7 +761,7 @@
                         </div>
                         <div class="email">
                             <div class="icon2">
-                                <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
+                                <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
                             </div>
                             <div>
                                 <h1>Email</h1>
