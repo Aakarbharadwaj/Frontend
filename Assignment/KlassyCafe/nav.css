@@ -5,6 +5,7 @@
 }
 .box{
     position: relative;
+    
 }
 .nav{
     display: flex;
@@ -251,9 +252,10 @@ button:hover{
 .chefsCard{
     border: 1.5px solid;
     height: 480px;
-    max-width: 390px;
+    max-width: 100%; /*390px*/
     border-radius: 5px;
     position: relative;
+    margin: 20px;
 }
 .chefsbox{
     display: flex;
@@ -357,7 +359,7 @@ button:hover{
     font-size: 1rem;
 }
 .contactRight{
-    text-align: center;
+    /* text-align: center; */
     background-color: #fff;
     color: #000000;
     border-radius: 5px;
@@ -369,18 +371,18 @@ button:hover{
     margin: 40px;
 }
 .contactRight textarea,.contactRight .button{
-    max-width: 80%;
-    margin: auto;
+    width: 81%;
+    margin: 0 9%;
     border-radius: 5px;
 }
 .contactRight .button{
     background-color: rgb(255, 119, 0);
     padding: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 .contactLeft,.contactRight{
     width: 38vw;
-    margin: 100px 0;
+    margin: 70px 0;
     
     /* height: 70vh; */
 }
@@ -410,7 +412,7 @@ button:hover{
     margin-bottom: 20px;
 }
 fieldset{
-    width: 39%;
+    width: 79%;
     padding: 15px 0 15px 10px;
     margin: 20px 15px 0 0;
     border-radius: 5px;
@@ -518,6 +520,13 @@ footer{
         visibility: visible;
         margin-top: 16px;
     }
+    .contact{
+        display: block;
+    }
+    
+    .contactLeft,.contactRight{
+        width: 100%;
+    }
 }
 @media (max-width:375px){
     .menubar i{
@@ -529,9 +538,7 @@ footer{
     footer{
         flex-wrap: wrap;
     }
-    footer>div{
-        padding-top: 10px;
-    }
+    
 }
 @media (min-width:994px){
     .list{
@@ -552,6 +559,20 @@ footer{
     }
     .crd{
         margin-top: 20px;
+    }
+    footer>div{
+        padding-top: 20px;
+    }
+    .details{
+        display: block;
+        margin: auto;
+    }
+    .phone,.email{
+        width: 85%;
+        margin: 20% auto;
+    }
+    .contactLeft .heading{
+        padding: 15px 0 0 15px;
     }
 }
 @media (max-width:1024px){

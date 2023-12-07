@@ -1,0 +1,26 @@
+
+.item{
+    background-color: rgba(128, 128, 128, 0.082);
+    text-align: center;
+    width: 200px;
+    padding: 11px;
+    margin: 6px;
+    border-radius: 10px;
+}
+.item input:nth-child(1){
+    background-color: green;
+    color: white;
+}
+.item input:nth-child(2){
+    background-color: rgb(128, 83, 0);
+    color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    width: 51%;
+    margin: auto;
+    row-gap: 10px;
+    margin-top: 150px;
+    
+}
