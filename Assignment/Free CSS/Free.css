@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.row2,.row3{
+    background: rgb(224, 223, 223);
+}
+.innerdiv{
+    max-width: 75vw;
+    margin: auto;
+}
+.nav a{
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+    font-size: .9rem;
+}
+.nav li{
+    list-style: none;
+    border-right: 1px solid rgb(173, 171, 171);
+    padding: 0 10px;
+}
+.nav ul{
+    display: flex;
+    justify-content: right;
+    padding: 15px 0;
+}
+@media (max-width:1024px) {
+    .innerdiv{
+        max-width: 90%;
+    }
+    .nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav li{
+        border: none;
+    }
+}
+
+.header h1{
+    font-size: 5rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+.header h1 a,.header h1 p{
+    text-decoration: none;
+    color: #464545;
+}
+.header{
+    padding-top: 40px;
+}
+.header ul{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(47, 47, 47);
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+}
+.header ul a{
+    color: white;
+    font-size: larger;
+    font-weight: 200;
+    text-decoration: none;
+}
+.header li{
+    list-style: none;
+    padding: 20px;
+}
+
+@media(max-width:425px){
+    .header h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .header p{
+        font-size: .7rem;
+        text-align: center;
+    }
+    .row2 ul{
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 15px;
+    }
+    .row2 li{
+        background: #464545;
+        /* width: 92%; */
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+@media (max-width:320px){
+    .header h1{
+        font-size: 3rem;
+    }
+}
+}
+
+.add{
+    padding: 8px;
+    background: white;
+}
+.left{
+    padding: 30px 0;
+    width: 63%;
+}
+.right{
+    padding: 30px 0 0 30px;
+    width: 37%;
+}
+.left h4,.right h4{
+    background-color: rgb(224, 223, 223);
+    border-style: none;
+    line-height: 17px;
+    font-size: 1.2rem;
+    color: #464545;
+}
+.left span,.right span{
+    background-color: #fff;
+    padding: 0 25px 0 0;
+}
+.content{
+    display: flex;
+}

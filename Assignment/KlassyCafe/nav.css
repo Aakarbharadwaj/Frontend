@@ -21,7 +21,6 @@
     position: absolute;
     right: 180px;
     visibility: hidden;
-
 }
 #feature:hover .options{
     visibility: visible;
