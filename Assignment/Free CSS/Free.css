@@ -6,7 +6,7 @@
 }
 
 .row2,.row3{
-    background: rgb(224, 223, 223);
+    background: #E2E2E2;
 }
 .innerdiv{
     max-width: 75vw;
@@ -112,7 +112,7 @@
     width: 37%;
 }
 .left h4,.right h4{
-    background-color: rgb(224, 223, 223);
+    background-color: #E2E2E2;
     border-style: none;
     line-height: 17px;
     font-size: 1.2rem;
@@ -124,4 +124,35 @@
 }
 .content{
     display: flex;
+}
+.ldiv{
+    width: 45%;
+    padding: 45px 0;
+    /* border: 1px solid ; */
+}
+
+.social a{
+    text-decoration: none;
+    color: red;
+    font-size: larger;
+    margin: auto;
+}
+.social ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+}
+.social li{
+    border: 1px solid rgb(174, 174, 174);
+    padding: 15px 0 15px 19px;
+    border-radius: 10px;
+    width: 55px;
+}
+.social img{
+    border: 1px solid rgb(174, 174, 174);
+    border-radius: 10px;
+    padding: 8px 8px;
+    margin-top: 10px;
+    width: 100%;
 }
