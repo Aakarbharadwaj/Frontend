@@ -5,7 +5,8 @@ document.getElementById("btn").onclick=function(){
 
     for(let i=1  ; i<=l.length ; i++){
         if(i==num){
-            document.querySelectorAll(".boxcolor")[i-1].style.background=c;
+            l[i-1].style.background=c;
         } 
     }
 }
+// document.querySelectorAll(".boxcolor")
