@@ -39,6 +39,8 @@
     position: absolute;
     bottom: 20px;
     right: 10px;
+    font-weight: 700;
+    
 }
 .type{
     font-size: 1.9rem;
