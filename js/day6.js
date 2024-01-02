@@ -1,6 +1,5 @@
 let btn = document.querySelector("#btn");
         // let heading = document.querySelector("h1");
-        console.log(name);
         btn.onclick=function(){
             let heading = document.createElement("h1");
             // console.log(heading);
