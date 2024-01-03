@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        text-align: center;
+    }
+
+    .clock {
+        width: 40%;
+        text-align: center;
+        margin: auto;
+        border: 1px solid;
+        margin-top: 60px;
+        background-color: black;
+        border-radius: 20px;
+        padding: 30px;
+    }
+    h2 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 5rem;
+        color: rgb(170, 169, 169);
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    ul li {
+        color: white;
+        list-style: none;
+        font-size: 5rem;
+        font-family: 'Orbitron', sans-serif;
+    }
+    h1{
+        color: skyblue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-top: 30px;
+    }
+    .input input {
+        border: 2px solid;
+    }
+    .mode{
+        padding: 20px;
+        background-color: orangered;
+    }
+</style>
+
+<body id="body">
+    <div class="container">
+        <!-- <div class="input">
+            <input type="text" id="inputH" placeholder="Enter hour">
+            <input type="text" id="inputM" placeholder="Enter Minute">
+            <input type="text" id="inputS" placeholder="Enter seconds">
+            <button>Set time</button>
+        </div> -->
+        <div class="mode">
+            <select name="" id="select">
+                <option value="">-- Select Mode --</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
+        <div class="clock">
+            <h2>Digital clock</h2>
+            <ul>
+                <li id="h">02</li>
+                <li>:</li>
+                <li id="m">12</li>
+                <li>:</li>
+                <li id="s">45</li>
+            </ul>
+            <h1 id="w"></h1>
+        </div>
+    </div>
+
+
+    <script>
+        setInterval(()=>{
+            let time = new Date();
+            let hour = document.querySelector("#h").innerHTML = (time.getHours()<10?"0":"")+time.getHours();
+            let min = document.querySelector("#m").innerHTML = (time.getMinutes()<10?"0":"")+time.getMinutes();
+            let sec = document.querySelector("#s").innerHTML = (time.getSeconds()<10?"0":"")+time.getSeconds();
+            let wish = document.querySelector("#w");
+                if(time.getHours()<12 && time.getHours()>4){
+                    wish.innerHTML = "Good Morning"
+                }
+                else if(time.getHours()>12 && time.getHours()<20){
+                    wish.innerHTML = "Good Evening"
+                }
+                else{
+                    wish.innerHTML = "Good Night"
+                }
+            },10)
+            
+            //chaning mode
+            document.querySelector("#select").onclick = function () {
+                let mode = document.querySelector("#select").value;
+                if (mode === "dark") {
+                    document.querySelector("#body").style.backgroundColor = "black";
+                    // document.querySelector("li").style.backgroundColor = "black";
+                    // document.querySelector(".class")[0].style.backgroundColor = "blue";
+                }
+                else {
+                    document.querySelector("#body").style.backgroundColor = "white";
+                }
+            }
+        
+        // let btn = document.querySelector("button");       //for manual time set
+        // btn.onclick = function () {
+            
+            //     let a = document.querySelector("#inputH").value;
+            //     let b = document.querySelector("#inputM").value;
+            //     // let c = document.querySelector("#inputS").value;
+            //     time.setHours(a);
+            //     time.setMinutes(b);
+            //     time.setSeconds(c);
+            //     document.querySelector("#h").innerHTML = time.getHours();
+            //     document.querySelector("#m").innerHTML = time.getMinutes();
+            //     // document.querySelector("#s").innerHTML = time.getSeconds();
+            
+            // }
+            
+
+
+        // console.log(time);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
