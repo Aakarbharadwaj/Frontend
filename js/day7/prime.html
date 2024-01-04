@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <input type="number" placeholder="enter number">
+        <button>check</button>
+        <h4></h4>
+    </div>
+
+    <script>
+        let btn = document.querySelector("button");
+
+        // btn.addEventListener("click",()=>{
+            
+        //     let num = document.querySelector("input").value;
+        //     if(num==2 || num==3 || num==5 || num==7 || num==11 ){
+        //         console.log(num+" is a prime number")
+        //     }
+        //     else if(num%2!=0 && num%3!=0 && num%5!=0 && num%7!=0 && num%11!=0){
+        //         console.log(num+" is a prime number");
+        //     }
+        //     else{
+        //         console.log(num+" is not a prime number");
+        //     }
+        // })
+
+        function prime(){
+
+            let num = document.querySelector("input").value;
+            if(num==2 || num==3 || num==5 || num==7 || num==11 ){
+                console.log(num+" is a prime number")
+            }
+            else if(num%2!=0 && num%3!=0 && num%5!=0 && num%7!=0 && num%11!=0){
+                console.log(num+" is a prime number");
+            }
+            else{
+                console.log(num+" is not a prime number");
+            }
+
+        }
+
+        btn.onclick= prime;
+    </script>
+</body>
+</html>

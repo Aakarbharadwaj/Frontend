@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function add(a,b){
+            console.log(a+b);
+        }
+        function minus(a,b){
+            console.log(a+b);
+        }
+        function mul(a,b){
+            console.log(a+b);
+        }
+        function divide(a,b){
+            console.log(a+b);
+        }
+
+        add(10,20);
+        minus(30,15);
+        mul(10,20);
+        divide(80,40);
+        minus(2,9);
+
+
+        //default argument
+        function add(a,b=60){
+            return a+b;
+        }
+
+        let a = add(10);
+        console.log("answer = "+a);
+    </script>
+
+</body>
+</html>
