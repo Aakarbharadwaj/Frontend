@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .color{
+            padding: 30px 50px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+    </div>
+    <script>
+        function r(){
+            return Math.floor(Math.random()*255)
+        }
+        function g(){
+            return Math.floor(Math.random()*255)
+        }
+        function b(){
+            return Math.floor(Math.random()*255)
+        }
+        
+      
+        let l = document.querySelectorAll(".color");
+        
+        for(let i of l){
+
+           i.onmouseover = function(){
+
+             i.style.backgroundColor=`rgb(${r()},${g()},${b()})`;
+           }
+        }
+
+        // for(let i=0 ; i<=l.length ;i++){
+        //     l[i].onmouseover = function(){
+        //     l[i].style.backgroundColor=`rgb(${r()},${g()},${b()})`;
+        //     }
+        // }
+       
+       
+        //         document.getElementById("body").onmouseover = function(){
+        //             let l = document.querySelectorAll(".color");
+        //             for(let i=0 ; i<=l.length ;i++){
+        //                 document.querySelectorAll(".color")[i].style.backgroundColor=rgb(r()+g()+b());
+        //             }
+        //         }
+        </script>
+  
+</body>
+</html>
