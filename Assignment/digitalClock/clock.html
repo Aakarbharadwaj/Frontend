@@ -94,15 +94,15 @@
             let min = document.querySelector("#m").innerHTML = (time.getMinutes()<10?"0":"")+time.getMinutes();
             let sec = document.querySelector("#s").innerHTML = (time.getSeconds()<10?"0":"")+time.getSeconds();
             let wish = document.querySelector("#w");
-                if(time.getHours()<12 && time.getHours()>4){
-                    wish.innerHTML = "Good Morning"
-                }
-                else if(time.getHours()>12 && time.getHours()<20){
-                    wish.innerHTML = "Good Evening"
-                }
-                else{
-                    wish.innerHTML = "Good Night"
-                }
+                // if(time.getHours()<12 && time.getHours()>4){
+                //     wish.innerHTML = "Good Morning"
+                // }
+                // else if(time.getHours()>12 && time.getHours()<20){
+                //     wish.innerHTML = "Good Evening"
+                // }
+                // else{
+                //     wish.innerHTML = "Good Night"
+                // }
             },10)
             
             //chaning mode

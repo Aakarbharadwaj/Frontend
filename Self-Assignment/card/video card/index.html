@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container{
+            width: 65%;
+            border: 1px solid;
+            background-color: black;
+        }
+        .title{
+            color: aliceblue;
+        }
+        .card-flex{
+            display: flex;
+            margin-top: 10px;
+        }
+        .card{
+            display: flex;
+            gap: 10px;
+        }
+        
+        ul{
+            display: flex;
+            gap: 8px;
+        }
+        ul li{
+            color: grey;
+            list-style: none;
+            font-size: smaller;
+        }
+        .thumnail{
+           border-radius: 12px;
+        }
+        .left{
+            position: relative;
+        }
+        .time{
+            position: absolute;
+            box-sizing: border-box;
+            background-color: grey;
+            font-weight: 600;
+            width: 44px;
+            padding: 0 3px;
+            border-radius: 5px;
+            bottom: 8px;
+            right: 7px;
+        }
+        .time p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="left">
+                <img src="http://source.unsplash.com/150x100?coding" alt="" class="thumnail">
+                <div class="time"><p>21:59</p></div>
+            </div>
+            <div class="info">
+                <p class="title">css display</p>
+                <ul class="card-flex">
+                    <li class="name">code with Aakar</li>
+                    <li>.</li>
+                    <li class="views">99k</li>
+                    <li>.</li>
+                    <li class="month">1 month</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
