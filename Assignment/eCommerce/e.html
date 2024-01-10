@@ -7,12 +7,16 @@
     <title>Document</title>
     <style>
         *{
-            margin: 0;
+            margin: 0px;
             padding: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
         }
+        /* .container{
+            background-color: #fff;
+        } */
         .width{
-            width: 75%;
+            width: 80%;
             margin: auto;
         }
         /* nav bar */
@@ -24,7 +28,9 @@
             padding: 15px;
         }
         .menu{
-            width: 30%;
+            /* max-width: 30%; */
+            display: flex;
+            gap: 10px;
         }
         .search{
             width: 13%;
@@ -32,15 +38,23 @@
         .menu a{
             text-decoration: none;
         }
-        .header{
-            background-image: url(https://previews.123rf.com/images/alexyakimvski/alexyakimvski1612/alexyakimvski161200041/68190850-male-model-in-a-suit-posing-next-to-a-grey-wall.jpg);
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-        }
         /* header */
         .header{
+            background: url(https://previews.123rf.com/images/alexyakimvski/alexyakimvski1612/alexyakimvski161200041/68190850-male-model-in-a-suit-posing-next-to-a-grey-wall.jpg);
+            min-width: 100%;
+            min-height: 100vh;
+            background-position: cover;
+            background-size: cover;
+            box-sizing: border-box;
             position: relative;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .title-cover{
+            width: 100%;
+            position: relative;
+            min-height: 100vh;
         }
         .title h1{
             font-size: 4rem;
@@ -53,10 +67,11 @@
         }
         .title{
             color: white;
-            width: 35%;
-            position: absolute;
+            /* width: 75%; */
+            margin: 100px auto;
+            /* position: absolute;
             top: 30%;
-            left: 10%;
+            left: 10%; */
         }
         .title button{
             padding: 15px 25px;
@@ -67,11 +82,11 @@
             background-color: rgb(109, 182, 0);
             color: rgb(248, 248, 248);
         }
+        
         /* box */
         .features{
             display: flex;
-            padding: 50px;
-            
+            padding: 50px;     
             justify-content: space-between;
         }
         .box a{
@@ -90,10 +105,222 @@
         .box p{
             color: grey;
         }
+
+        /* feature */
+        .f-content{
+            width: 31%;
+        }
+        .f-img{
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .f-img img{
+            width: 100%;
+        }
+        .f-head{
+            text-align: center;
+            margin: 80px 0;
+        }
+        .f-box{
+            /* padding: 10px; */
+            /* max-width: 100%; */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .f-shop{
+            padding: 20px;
+            background-color: rgb(142, 241, 85);
+            opacity: .5;
+            width: 80%;
+            left: 10px;
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+        }
+        .f-img:hover {
+            .f-shop{
+                transform: translateY(-100%);
+                transition-duration: 1s;
+            }
+        }
+        .f-price{
+            padding: 10PX;
+            border: 1px solid rgb(241, 239, 239);
+            border-top: none;
+            p{
+                font-size: 1.3rem;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+        }
+        .f-para{
+            margin-top: 20px;
+            color: grey;
+        }
+        del{
+            color: grey;
+            margin-left: 40px;
+            font-size: smaller;
+        }
+
+        /* offer */
+        .offer{
+            background: url(https://themewagon.github.io/eiser/img/offer-bg.png) no-repeat;
+            background-position: center;
+            margin: 60px 0;
+            /* max-width: 100vw; */
+        }
+        .o-content{
+            display: flex;
+            justify-content: end;
+        }
+        .o-detail{
+            padding: 120px;
+            text-align: center;
+            .first{
+                color: grey;
+                font-size: 1.5rem;
+            }
+            .o-h1{
+                font-size:6.5rem;
+                font-weight: 700;
+            }
+            button{
+                background-color: rgb(98, 199, 40);
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 11px 30px;
+                margin-top: 40px;
+                border: 1px solid rgb(98, 199, 40);
+            }
+            .last{
+                color: grey;
+                margin: 20px 0;
+            }
+
+        }
+        button:hover{
+            color: rgb(98, 199, 40);
+            background-color: #fff;
+            transition-duration: .5s;
+        }
+        
+        /* new-header */
+        .n-header{
+            text-align: center;
+            /* border: 1px solid; */
+            h2{
+                padding-bottom: 20px;
+            }
+            p{
+                color: grey;
+            }
+        }
+
+        /* new-product */
+        /* .new-product{
+            
+        } */
+        .product{
+            margin-top: 80px;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .left{
+                background: #f6f6f6;
+                max-width: 100%;
+                padding: 20px;
+                text-align: center;
+            }
+            .right{
+                display: flex;
+                max-width: 90%;
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: end;
+            }
+            .r-card{
+                width: 250px;
+                height: 340px;
+                /* background: #f6f6f6;   */
+            }
+            .product-img{
+                width: 100%;
+                margin: 70px 0;
+            }
+            h5{
+                font-size: larger;
+                font-weight: 500;
+                margin: 70px 0 20px 0;
+            }
+            .first{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            .second{
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            button{
+                padding: 14px 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(98, 199, 40);
+                background-color: rgb(98, 199, 40);
+                color: #f6f6f6;
+                font-weight: 500;
+                margin: 20px 0 60px 0;
+            }
+            button:hover{
+                background-color:#f6f6f6; 
+                color: rgb(98, 199, 40);
+                transition-duration: .5s;
+            }
+        }
+        .r-img{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .r-img img{
+            width: 100%;
+        }
+        .r-shop{
+            position: absolute;
+            background-color: rgb(98, 199, 40);
+            opacity: .5;
+            width: 90%;
+            left: 11px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+           
+        }
+        .r-card:hover .r-shop{
+            transform: translateY(-40px);
+            transition-duration: .5s;
+        }
+        .r-price{
+            border: 1px solid rgb(230, 230, 230);
+            border-top: none;
+            margin-top: -3px;
+            padding: 10px;
+
+            p{
+                padding:7px 0;
+                font-size: large;
+            }
+            .rate{
+                font-size: 1.5rem
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container"> -->
 
         <div class="nav flex width">
             <div class="logo flex"><a href=""><img src="https://themewagon.github.io/eiser/img/logo.png" alt=""></a></div>
@@ -125,10 +352,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- header -->
         <div class="header">
-            <div class="title">
+            <div class="title width">
                 <h4>MEN COLLECTION</h4>
-                <h1><span>Show</span> Your Personal <span>Style</span></h1>
+                <h1><span>Show</span>
+                     Your <br> Personal 
+                     <span>Style</span>
+                    </h1>
                 <p>Fowl saw dry which a above together place.</p>
                 <button>VIEW COLLECTION</button>
             </div>
@@ -163,6 +395,206 @@
                   <P>Shall open divide a one</P>
             </div>
         </div>
-    </div>
+        <div class="feature">
+            <div class="f-head">
+                <h2 class="f-h1">FEATURE PRODUCT</h2>
+                <p class="f-para">Bring called seed first of third give itself now ment</p>
+            </div>
+
+            <!-- feature -->
+            <div class="f-box width">
+
+                <div class="f-content">
+                    <div class="f-img">
+                        <img src="http://source.unsplash.com/300x400?shoes" alt="">
+                        <div class="f-shop width2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="f-price width2">
+                        <p>Latest men's wear</p>
+                        <span>$25.00</span><span><del>$35.00</del></span>
+                    </div>
+                </div>
+
+                <div class="f-content">
+                    <div class="f-img">
+                        <img src="http://source.unsplash.com/300x400?shoes" alt="">
+                        <div class="f-shop width2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="f-price width2">
+                        <p>Latest men's wear</p>
+                        <span>$25.00</span><span><del>$35.00</del></span>
+                    </div>
+                </div>
+
+                <div class="f-content">
+                    <div class="f-img">
+                        <img src="http://source.unsplash.com/300x400?shoes" alt="">
+                        <div class="f-shop width2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="f-price width2">
+                        <p>Latest men's wear</p>
+                        <span>$25.00</span><span><del>$35.00</del></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="offer">
+            <div class="o-content width">
+                <div class="o-detail">
+                    <p class="first">ALL MEN’S COLLECTION</p>
+                    <h1 class="o-h1">50% OFF</h1>
+                    <button>DISCOVER NOW</button>
+                    <P class="last">Limited Time Offer</P>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- product -->
+        <div class="new-product width">
+            <div class="n-header">
+                <h2>NEW PRODUCTS</h2>
+                <p>Bring called seed first of third give itself now ment</p>
+            </div>
+
+            <div class="product">
+                <div class="left">
+                    <h5>COLLECTION OF 2019</h5>
+                    <h3 class="first">MEN’S SUMMER T-SHIRT</h3>
+                    <div class="product-img">
+                        <img src="https://themewagon.github.io/eiser/img/product/new-product/new-product1.png" alt="">
+                    </div>
+                    <h3 class="second">$120.70</h3>
+                    <button>ADD TO CART</button>
+                </div>
+
+                <div class="right">
+
+                    <div class="r-card">
+                        <div class="r-img">
+                            <img src="https://themewagon.github.io/eiser/img/product/new-product/n1.jpg" alt="">
+                            <div class="r-shop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                    </svg>
+                            </div>
+                        </div>
+                        <div class="r-price">
+                            <p>Latest men's wear</p>
+                            <span class="rate">$25.00</span><span><del>$35.00</del></span>
+                        </div>
+                    </div>
+
+                    <div class="r-card">
+                        <div class="r-img">
+                            <img src="https://themewagon.github.io/eiser/img/product/new-product/n3.jpg" alt="">
+                            <div class="r-shop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                    </svg>
+                            </div>
+                        </div>
+                        <div class="r-price">
+                            <p>Latest men's wear</p>
+                            <span class="rate">$25.00</span><span><del>$35.00</del></span>
+                        </div>
+                    </div>
+
+                    <div class="r-card">
+                        <div class="r-img">
+                            <img src="https://themewagon.github.io/eiser/img/product/new-product/n2.jpg" alt="">
+                            <div class="r-shop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                    </svg>
+                            </div>
+                        </div>
+                        <div class="r-price">
+                            <p>Latest men's wear</p>
+                            <span class="rate">$25.00</span><span><del>$35.00</del></span>
+                        </div>
+                    </div>
+                    
+                    <div class="r-card">
+                            <div class="r-img">
+                                <img src="https://themewagon.github.io/eiser/img/product/new-product/n4.jpg" alt="">
+                                <div class="r-shop">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="r-price">
+                                <p>Latest men's wear</p>
+                                <span class="rate">$25.00</span><span><del>$35.00</del></span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
 </body>
 </html>
