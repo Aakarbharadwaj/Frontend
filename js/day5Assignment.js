@@ -1,7 +1,7 @@
 let l=document.querySelectorAll("button");
 
 for(let i of l){
-    
+    console.log(i.innerText);
     i.onclick = function(){
         console.log("hello");
     if(i.innerText == "="){

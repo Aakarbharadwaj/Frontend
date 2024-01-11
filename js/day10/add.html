@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button id="btn1">Add To Array</button>
+    <button id="btn2">Print Name</button>
+    <h1></h1>
+
+
+    <script>
+        let arr =[];
+        let btn1 =document.querySelector("#btn1");
+        let btn2 =document.querySelector("#btn2");
+       
+        btn1.onclick = ()=>{
+            let name = document.querySelector("input").value;
+            document.querySelector("input").value = "";
+            document.querySelector("input").focus();
+            arr.push(name);
+        }
+        btn2.onclick =()=>{
+            let i=0;
+            setInterval(()=>{
+                if(i>(arr.length)-1){
+                    clearInterval();
+                }
+                else if(i>(arr.length)-2){
+                    document.querySelector("h1").innerHTML +=arr[i];
+                }
+                else{
+                    document.querySelector("h1").innerHTML +=arr[i] + ",";
+                }
+                i++;
+            },1 000)
+        }
+
+    </script>
+</body>
+</html>
