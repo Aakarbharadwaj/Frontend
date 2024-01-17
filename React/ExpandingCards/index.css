@@ -1,0 +1,27 @@
+#container{
+    display: flex;
+    justify-content: center;
+
+}
+.card{
+    display: flex;
+    color: white;
+    border-radius: 100px;
+    /* gap: 10px; */
+    margin: 10px;
+    /* justify-content: center; */
+    background-size:cover;
+    width: 90vw;
+    height: 80vh;
+    align-items: end;
+    padding: 0 0 20px 40px;
+    position: relative;
+    flex: 0.5;
+    cursor: pointer;
+}
+
+.card.active{
+    flex: 5;
+    transition-duration: 1s;
+    /* transition: ease-in-out; */
+}
