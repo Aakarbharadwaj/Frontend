@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button id="btn1">Add</button>
+    <button id="print">Print</button>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+
+    <button id="popeven">Pop Even</button>
+    <button id="popodd">Pop Odd</button>
+    <button id="printp">Print Poped</button>
+    
+    <h1 id="pop1"></h1>
+    <h1 id="pop2"></h1>
+
+    <script>
+        let even =[];
+        let odd = [];
+        let btn = document.querySelector("#btn1");
+        let print = document.querySelector("#print");
+
+        
+        btn.addEventListener("click",()=>{
+            
+            let num = document.querySelector("input").value;
+            document.querySelector("input").value = "";
+            document.querySelector("input").focus();
+            console.log(num)
+            if(num%2==0){
+                even.push(num);
+            }
+            else{
+                odd.push(num);
+            }
+            // console.log(even);
+            // console.log(odd);
+        })
+        //print Array
+        
+        print.addEventListener("click",()=>{
+            document.querySelector("#h1").innerText = "Even : "+even;
+            document.querySelector("#h2").innerText ="Odd : "+odd;
+        })
+        
+        //pop Array
+        let popedEven = [];
+        let popedOdd = [];
+        let popeven = document.querySelector("#popeven");
+        let popodd =document.querySelector("#popodd");
+        let print2 =document.querySelector("#printp");
+        let pe;
+        popeven.addEventListener("click",()=>{
+            pe = even.pop();
+            popedEven.push(pe);
+        })
+        let po;
+        popodd.addEventListener("click",()=>{
+            po = odd.pop();
+            popedOdd.push(po);
+        })
+        print2.addEventListener("click",()=>{
+            document.querySelector("#pop1").innerText = "Poped Even : "+popedEven;
+            document.querySelector("#pop2").innerText = "Poped Odd : "+popedOdd;
+        })
+    </script>
+</body>
+</html>
