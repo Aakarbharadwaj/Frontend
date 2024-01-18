@@ -27,5 +27,5 @@ document.querySelector(".container").innerHTML += html;
 }
 
 
-getCard("Learn javaScript inn detail video #1","Code with Aakar",900000,"12:55",2);
+getCard("Learn javaScript inn detail video #1","Coding Guru Aakar",900000,"12:55",2);
 

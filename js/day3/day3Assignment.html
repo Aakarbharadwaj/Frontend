@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    
+    <style>
+        
+        .container{
+            max-width: 60%;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid;
+            margin: auto;
+            padding: 40px;
+        }
+        #slt{
+            padding: 10px 150px 10px 10px;
+            margin-top: 10px;
+        }
+        .blocks ul{
+            list-style: none;
+        }
+        .blocks div{
+            background-color: black;
+            /* width: 40px;
+            height: 40px; */
+            border-radius: 50%;
+            padding: 18px;
+            /* margin-right: 22px; */
+        }
+        .blocks{
+            display: flex;
+            margin-top: 20px;
+            width: 30%;
+            justify-content: space-around;
+            
+        }
+        #para{
+            width: 60%;
+        }
+        #r{
+            background-color: red;
+        }
+        #y{
+            background-color: yellow;
+        }
+        #g{
+            background-color: green;
+        }
+        #a{
+            background-color: blue;
+        }
+        #b{
+            background-color: black;
+        }
+        .button{
+            display: flex;
+            margin-top: 40px;
+        }
+        .button button{
+            background-color: green;
+            width: 40px;
+            margin-right: 20px;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 6px;
+            color: aliceblue;
+            border-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <h2>Select Your Domain</h2>
+        <select name="" id="slt">
+            <option value="">--Make a Choice--</option>
+            <option value="Django" >Django</option>
+            <option value="AWS" >AWS</option>
+            <option value="Html" >Html</option>
+            <option value="Angular" >Angular</option>
+        </select>
+        <div class="blocks">
+            <div id="r"></div>
+            <div id="y"></div>
+            <div id="g"></div>
+            <div id="a"></div>
+            <div id="b"></div>
+        </div>
+        <p id="para"></p>
+        <div class="button">
+            <button id="upper">upper</button>
+            <button id="lower">lower</button>
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+        </div>
+    </div>
+    <script src="day3Assignment.js"></script>
+</body>
+</html>

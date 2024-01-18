@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary</title>
+</head>
+<body>
+    <div>
+        <label for="num">Enter value</label>
+        <input type="text" name="" id="num">
+        <button id="btn">submit</button>
+    </div>
+    <script>
+        // document.getElementById("btn").onclick=function(){
+        //     let a=document.getElementById("num").value;
+        //    for(i=1;i<=a/2;i++){
+        //     console.log(i);
+        //    }
+        // }
+        //////////
+        document.getElementById("btn").onclick=function(){
+            let result = document.getElementById("num").value;
+            
+            if(result>='a' && result<='z'){
+                console.log("alphabet");
+            }
+            else if(result>='A' && result<='Z'){
+                console.log("alphabet");
+            }
+            
+            else if(result>=0 || result<0){
+                console.log("number");
+            }
+            else{
+                console.log("special Charcacter")
+            }
+        }
+        // let a = 2;
+        // a%2==0?console.log(true):console.log(false);
+
+        // switch (key) {
+        //     case 0:
+                
+        //         break;
+        //     case 0:
+                
+        //         break;
+        //     case 0:
+                
+        //         break;
+        //     case 0:
+                
+        //         break;
+        //     case 0:
+                
+        //         break;
+        //     case 0:
+                
+        //         break;
+        //     case 0:
+                
+        //         break;
+            
+        //     default:
+        //         break;
+        // }
+
+    </script>
+</body>
+</html>

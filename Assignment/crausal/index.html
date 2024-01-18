@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crausal</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            width: 70%;
+            border: 2px solid black;
+            height: 80vh;
+            /* display: flex; */
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .active{
+            transform: translateX(-100%);
+            transition-duration: 1s;
+        }
+        .inactive{
+            transform: translateX(0%);
+            transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button id="btn1"> < </button>
+        <div class="box fullWidth">
+            <img src="images/bg1.webp" alt="" >
+            <img src="images/joqa_f189_200504.jpg" alt="" >
+            <img src="images/bg1.webp" alt="" >
+        </div>
+        <button id="btn2"> > </button>
+    </div>
+</body>
+<script>
+    let left = document.querySelector("#btn1");
+    let right = document.querySelector("#btn2");
+    let img = document.querySelectorAll("img");
+    let i=img.length;
+    left.addEventListener("click",()=>{
+        img[i-1].classList.add("active");
+        --i;
+    })
+    right.addEventListener("click",()=>{
+        removeAvtive();
+        img[i-1].classList.add("inactive");
+        --i;
+    })
+    function removeAvtive(){
+      img.forEach(item=>{
+        item.classList.remove("active")
+      })
+    }
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 400px;
+            background-color: orangered;
+            border: 2px solid;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        img{
+            width: 100%;
+            border: 2px solid yellow;
+        }
+        .text{
+            background-color: green;
+            border: 2px solid pink;
+            position: absolute;
+            padding: 30px;
+            bottom: 0px;
+            
+        }
+        /* .box:hover .text{
+            transition-duration: 1s;
+            transform: translateY(-22px);
+        } */
+
+        @media(min-width:800px){
+            body{
+                background-color: pink;
+            }
+        }
+        @media(max-width:800px){
+            .box{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="http://source.unsplash.com/400x350?vegan food" alt="">
+        <div class="text">food options</div>
+    </div>
+</body>
+</html>
