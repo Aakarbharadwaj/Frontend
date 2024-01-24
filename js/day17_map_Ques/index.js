@@ -30,12 +30,50 @@ const complexData = [
 ];
 
 
+// //Ques1. 
 
-// let naam = arr.map(item=>{
-//     return item.naam;
+// let arr = complexData.map((i) => {
+//     // console.log(i.orders)
+//     return {
+//         Name: i.name,
+//         Total_amount: i.orders.reduce((x, y) => {
+//             return (x.amount + y.amount);
+//         })
+//     }
 // })
-// console.log(naam)
-// let amount = arr.map(item=>{
-//     return item.amount;
+// console.log(arr);
+
+//Ques2. Filter users who have at least one order with a status of 'pending'.
+
+// let arr = complexData.map(i => {
+//     i.orders.map(j => {
+//         if (j.status == "pending") {
+//             console.log(i);
+//         }
+//     });
 // })
+
+////Ques3. Map the array to get an array of objects containing user names and their completed order IDs.
+
+// let arr = complexData.map(i => {
+
+//     return i.orders.map(j => {
+//         if (j.status === "completed") {
+//             return {
+//                 Name: i.name,
+//                 Order_id: j.orderId
+//             }
+//         }
+//     })
+// })
+
+// console.log(arr);
+
+// //// Ques4. Filter orders with an amount between 30 and 70.
+// let arr = complexData.map(i=>{
+//     i.filter(j=>{
+//         if()
+//     })
+// })
+
 
